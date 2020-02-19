@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IProduct } from './product';
 import { ProductService } from './product.service';
 
+
 @Component ({
     templateUrl: './product-list.component.html',
     styleUrls: ['./product-list.component.css']
@@ -25,8 +26,8 @@ export class ProductListComponent implements OnInit {
     filteredProducts: IProduct[];
     products: IProduct[] = [];
 
-    constructor(private productService: ProductService) {
-    }
+    constructor(private productService: ProductService,) {}
+ 
 
     onRatingClicked(message: string): void {
         this.pageTitle = 'Product List: ' + message;
